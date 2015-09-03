@@ -69,7 +69,7 @@ docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.1 \
 * `SONARQUBE_HOST_URL` Host that Sonar Qube is running on. Defaults to `http://localhost:9000`
 * `SONARQUBE_JDBC_USERNAME` Database username for Sonar Qube. Defaults to `sonar`
 * `SONARQUBE_JDBC_PASSWORD` Database password for Sonar Qube. Defaults to `sonar`
-* `$SONARQUBE_JDBC_PASSWORD_PATH` Path to file with database password for Sonar Qube. Overwrites 
+* `SONARQUBE_JDBC_PASSWORD_PATH` Path to file with database password for Sonar Qube. Overwrites 
   `SONARQUBE_JDBC_PASSWORD` if present.
 * `SONARQUBE_JDBC_URL` The JDBC url to the database for Sonar Qube. Defaults to 
   `jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8`
