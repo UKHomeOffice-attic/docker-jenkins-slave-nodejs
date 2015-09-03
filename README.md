@@ -3,7 +3,13 @@
 This container is an Jenkins slave with NodeJS Build Tools. It extends the 
 [Jenkins Slave Docker Container][1] by adding NodeJS build tools.
 
+The build tools that this container somes with are
+
+* [Sonar Qube Sonar Runner][runner]
+* NodeJS
+
 [1]: https://github.com/UKHomeOffice/docker-jenkins-slave "Jenkins Slave Docker Container"
+[runner]: http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Runner
 
 ## Getting Started
 
@@ -42,7 +48,7 @@ In this mode you pass the container 3 parameters.
 This looks look a bit like this in docker
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.1.0 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.0 \
            jenkins-slave \
            http://jenkins-url:5321 \
            my-node
@@ -54,7 +60,7 @@ run the command you want to execute as a parameter as normal.
 So if you wanted to run bash, you'd run this 
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.1.0 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.0 \
            bash
 ```
 
