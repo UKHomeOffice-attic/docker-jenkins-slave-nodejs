@@ -48,7 +48,7 @@ In this mode you pass the container 3 parameters.
 This looks look a bit like this in docker
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.1 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.2 \
            jenkins-slave \
            http://jenkins-url:5321 \
            my-node
@@ -60,7 +60,7 @@ run the command you want to execute as a parameter as normal.
 So if you wanted to run bash, you'd run this 
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.1 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.2 \
            bash
 ```
 

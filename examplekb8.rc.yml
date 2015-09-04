@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: ci-jenkins
+    service: ci
+    type: jenkins
+  name: ci-jenkins-slave-v0
+spec:
+  replicas: 1
+  selector:
+    name: ci-jenkins-slave
+    service: ci
+    type: jenkins-slave
+    version: v0
+  template:
+    metadata:
+      labels:
+        name: ci-jenkins-slave
+        service: ci
+        type: jenkins-slave
+        version: v0
+    spec:
+      containers:
+        -
+          image: quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.2
+          args:
+            - "jenkins-slave"
+            - "http://jenkins-endpoint"
+            - "nodename-here"
+          imagePullPolicy: Always
+          name: ci-jenkins
+          resources:
+            limits:
+              memory: 2Gi
+      restartPolicy: Always

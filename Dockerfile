@@ -17,6 +17,7 @@ ENV SONARQUBE_HOST_URL=http://localhost:9000
 ENV SONARQUBE_JDBC_USERNAME=sonar
 ENV SONARQUBE_JDBC_PASSWORD=sonar
 ENV SONARQUBE_JDBC_URL=jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8
+ENV SONAR_RUNNER_HOME=/sonar-runner/sonar-runner-$SONAR_RUNNER_VERSION
 
 RUN wget -O /tmp/sonar-runner-dist-$SONAR_RUNNER_VERSION.zip \
         http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/$SONAR_RUNNER_VERSION/sonar-runner-dist-$SONAR_RUNNER_VERSION.zip && \
