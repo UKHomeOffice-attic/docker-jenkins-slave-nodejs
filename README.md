@@ -1,5 +1,7 @@
 # Jenkins Slave Docker Container: NodeJS Build Tools
 
+[![Build Status](https://travis-ci.org/UKHomeOffice/docker-jenkins-slave-nodejs.svg?branch=master)](https://travis-ci.org/UKHomeOffice/docker-jenkins-slave-nodejs)
+
 This container is an Jenkins slave with NodeJS Build Tools. It extends the 
 [Jenkins Slave Docker Container][1] by adding NodeJS build tools.
 
