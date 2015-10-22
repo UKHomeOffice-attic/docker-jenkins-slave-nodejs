@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         -
-          image: quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.2
+          image: quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.3.0
           args:
             - "jenkins-slave"
             - "http://jenkins-endpoint"

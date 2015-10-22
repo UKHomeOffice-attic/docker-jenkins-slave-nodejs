@@ -39,19 +39,30 @@ The Remote FS Root you want will be `/home/jenkins`
 
 This container has two modes of operation, the first is jenkins slave mode.
 
-In this mode you pass the container 3 parameters.
+In this mode you pass the container 3 parameters (or 4 if you need to provide a secret).
 
 * `jenkins-slave` - To tell the container to run as a jenkins slave
 * `http://jenkins-url:5321` - Jenkins URL
 * `my-node` - The name you've given the node
+* `secret` (optional) - The Jenkins secret
 
 This looks look a bit like this in docker
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.2 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.3.0 \
            jenkins-slave \
            http://jenkins-url:5321 \
            my-node
+```
+
+Or if you need to provide a secret
+
+```shell
+docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.3.0 \
+           jenkins-slave \
+           http://jenkins-url:5321 \
+           my-node \
+           secretive-secret
 ```
 
 The other mode of operation is simply to drop you into a bash shell on the container. For this just
@@ -60,7 +71,7 @@ run the command you want to execute as a parameter as normal.
 So if you wanted to run bash, you'd run this 
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.2.2 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-nodejs:v0.3.0 \
            bash
 ```
 
